@@ -1,0 +1,454 @@
+/*Farah Irdina Binti Ahmad Zulkiflee, 2215184*/
+/*header*/
+header{
+    background-color: #b19cd9;/*header colour*/
+    display: flex;/*header layout*/
+    flex-wrap: nowrap;/*prevent from wrapping*/
+    align-items:center;/*center the content vertically*/
+    padding: 40px 20px;/*add padding*/
+}
+.logo{
+    display: flex;/*logo layout*/
+    align-items: center;/*center the content vertically*/
+    flex-direction: row;/*arrange the content in a row*/
+}
+.logo img{
+    height: 70px;/*image height*/
+    width: 200px;/*image width*/
+    margin-right: 20px;/*add right margin*/
+}
+.logo h1{
+    color:black;/*logo heading's text colour*/
+    margin-top: 10px;/*add top margin*/
+}
+/*for half screen*/
+@media (max-width: 768px) {
+    .logo {
+        flex-direction: column;/*arrange the content in a column*/
+    }
+    .logo img{
+        margin-left: 20px;/*add left margin*/
+    }
+    .logo h1 {
+        margin-top: 10px;/*add top margin*/
+        margin-right: 0;/*remove right margin*/
+    }
+}
+.search-container{
+    display: flex;/*search bar layout*/
+    flex-grow: 1;/*allow container to grow and fill available space*/
+    justify-content: end;/*align the content to the right*/
+    align-items: center;/*center the content vertically*/
+}
+.search-input{
+    padding: 13.3px;/*add padding*/
+    border: 1px solid #cccccc;/*border style*/
+    border-radius: 20px 0 0 20px;/*round the left border*/
+    width: 150px;/*search input width*/
+    cursor:text;/*change cursor to text*/
+}
+.search-btn{
+    padding: 10px;/*add padding*/
+    border: 1px solid #cccccc;/*border style*/
+    border-left: none;/*remove left border*/
+    border-radius: 0 20px 20px 0;/*round the right border*/
+    background-color: white;/*background colour*/
+    cursor: pointer;/*change cursor to pointer*/
+}
+.search-icon{
+    height: 20px;/*search icon height*/
+}
+.language-selector{
+    display: flex;/*language option layout*/
+    align-items: center;/*center the content vertically*/
+}
+.language-selector img{
+    height: 40px;/*image height*/
+    margin-right:20px;/*add right margin*/
+    margin-left: 50px;/*add left margin*/
+}
+.language{
+    padding: 10px;/*add padding*/
+    border: 1px solid #cccccc;/*border style*/
+    border-radius: 10px;/*rounds the border corners*/
+    background-color: white;/*background colour*/
+    margin-right: 10px;/*set right margin*/
+    cursor: pointer;/*change cursor to pointer*/
+}
+/*navigation bar*/
+nav{
+    background-color: #b19cd9;/*navigation bar colour*/
+    padding: 5px 10px;/*add padding*/
+}
+nav ul{
+    list-style-type: none;/*remove the bullet points*/
+    display: flex;/*navigation bar layout*/
+    justify-content:space-evenly;/*leave equal space between the items*/
+    padding: 10px 0;/*add vertical padding*/
+}
+nav ul li a,
+nav ul li.current-page{
+    text-decoration: none;/*remove the underline*/
+    font-size:20px;/*font size*/
+}
+nav ul li a{
+    color: black;/*text colour*/
+    font-weight: bold;/*bold the text*/
+}
+nav ul li.current-page{
+    color: white;/*text colour*/
+    font-weight:bolder;/*bold the text*/
+}
+nav ul li:hover {
+    border-bottom: 2px solid white;/*add a bottom border*/
+    cursor: pointer;/*change cursor to pointer*/
+}
+/*body*/
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;/*page font*/
+    background-color: lavender;/*page colour*/
+    margin: 0;/*remove the margin*/
+    overflow-x: hidden;/*prevent from getting horizontal slider*/
+}
+/*homepage*/
+#homepage{
+    padding: 50px;/*add padding*/
+    margin-bottom: 10px;/*add bottom margin*/
+}
+.about-me{
+    display: flex;/*about me layout*/
+    flex-direction: column;/*arrange the content in a column*/
+    align-items: center;/*center the content vertically*/
+    background-color:white;/*background colour*/
+    border-radius: 20px;/*round the border corners*/
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);/*add shadow effect*/
+    padding: 50px;/*add padding*/
+    max-width:900px;/*set max width*/
+    margin: auto;/*center the element*/
+}
+.about-me img{
+    border-radius: 50%;/*round image border*/
+    height: 200px;/*image height*/
+    width: 200px;/*image width*/
+    object-fit:cover;/*make sure image covers the whole frame*/
+    margin-bottom: 20px;/*add bottom margin*/
+}
+.about-me h2{
+    color: #5a3d8a;/*text colour*/
+    text-align: center;/*center-align the text*/
+}
+.about-me p{
+    line-height: 2.0;/*double-space the text*/
+    font-size: 18px;/*font size*/
+    color: black;/*text colour*/
+    margin: 10px;/*add margin*/
+    text-align: center;/*center-align the text*/
+}
+/*education*/
+#education{
+    padding: 40px 60px;/*add padding*/
+}
+.background{
+    display: grid;/*background layout*/
+    grid-template-columns:repeat(2, 1fr);/*2 column layout*/
+    gap: 30px;/*leave gap between grid items*/
+}
+.school{
+    display: flex;/*school layout*/
+    flex-direction: column;/*arrange the content in a column*/
+    align-items: center;/*center the content vertically*/
+    background: white;/*background colour*/
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);/*add shadow effect*/
+    border: 1px solid #cccccc;/*border style*/
+    border-radius: 10px;/*round the border corners*/
+    padding: 30px;/*add padding*/
+}
+.background h1,.achievements h1,.certificates h1{
+    color: #5a3d8a;/*text colour*/
+    font-size: 32px;/*font size*/
+    border-bottom: 2px solid black ;/*add bottom border*/
+    padding-bottom: 10px;/*add bottom padding*/
+}
+.background h1{
+    grid-column: span 2;/*span elements across 2 columns*/
+}
+.school h2{
+    color: #5a3d8a;/*text colour*/
+    font-size: 24px;/*font size*/    
+    text-align: center;/*center-align the text*/
+    margin: 10px 0;/*add vertical margin*/
+}
+.school h3, .school p {
+    color: black;/*text colour*/
+    text-align: center;/*center-align the text*/
+    margin: 10px 0;/*add vertical margin*/
+}
+.school img {
+    width: 200px;/*image width*/
+    height: auto;/*image height*/
+    margin-top: 20px;/*add top margin*/
+}
+.achievements, .certificates {
+    margin-top: 40px;/*add top margin*/
+}
+.achievements ul, .certificates ul {
+    display: flex;/*achievement and certificate layout*/
+    flex-direction: column;/*arrange the content in a column*/
+    align-items: center;/*center the content vertically*/
+    list-style: none;/*remove the bullet points*/
+    padding: 0;/*remove the padding*/
+}
+.achievements ul li, .certificates ul li {
+    background: linear-gradient(135deg, #e0e0e0, #ffffff);/*add gradient effect*/
+    margin: 10px 0;/*add vertical margin*/
+    padding: 20px;/*add padding*/
+    border-left: 5px solid #5a3d8a;/*add coloured left border*/
+    border-radius: 10px;/*round the border corner*/
+    font-size: 20px;/*font size*/
+    width: 80%;/*boxes width*/
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);/*add shadow effect*/
+    text-align: center;/*center-align the text*/
+}
+.achievements ul li:hover, .certificates ul li:hover {
+    background: linear-gradient(135deg, #f0f0f0, #ffffff);/*change the background gradient*/
+}
+.modal {
+    display: none;/*hide it when not clicked*/
+    position: fixed;/*make sure it stay in place*/
+    z-index: 1;/*make sure it stay on top*/
+    top:0;/*align to the top edge*/
+    width: 100%;/*full width*/
+    height: 100%;/*full height*/
+    background-color: rgba(0,0,0,0.5);/*blur the background*/
+    padding-top: 90px;;/*add top padding*/
+}
+.modal-content{
+    background-color: white;/*background colour*/
+    margin:auto;/*add margin*/
+    padding: 40px;/*add padding*/
+    border: 1px solid #cccccc;/*border style*/
+    width: 50%;/*width*/
+    border-radius: 10px;/*round the border corners*/
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);/*add shadow effect*/
+    text-align: center;/*center-align the text*/
+}
+#modal-image{
+    display: block;/*display as block element*/
+    width: 100%;/*image width*/
+    max-width: 500px;/*image max width*/
+    height: auto;/*image height*/
+    object-fit: cover;/*make sure image covers the whole frame*/
+    margin: 30px auto;/*add margin*/
+    border-radius: 10px;/*round the border corner*/
+}
+.close {
+    color:gray;/*close button colour*/
+    float: right;/*right-align*/
+    font-size: 28px;/*button size*/
+    font-weight: bold;/*bold the button*/
+}
+.close:hover{
+    color: black;/*close button colour*/
+    cursor: pointer;/*change cursor to pointer*/
+}
+/*timetable*/
+#timetable {
+    padding: 20px 50px;/*add padding*/
+}
+.timetableTitle{
+    text-align: center;/*center-align the text*/
+    padding: 20px 20px 0 20px;/*add padding*/
+    color:black;/*text colour*/
+    font-size: 35px;/*font size*/
+}
+table {
+    width: 100%;/*table width*/
+    border-collapse: collapse;/*remove the space between cells*/
+    margin-bottom: 30px;/*add bottom margin*/
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);/*add shadow effect*/
+}
+thead{
+    background-color:darkslateblue;/*table header colour*/
+    color:white;/*text colour*/
+}
+tbody{
+    background-color:gainsboro;/*table body colour*/
+    color: black;/*text colour*/
+}
+th,td {
+    font-size: 15px;/*font size*/
+    text-align: center;/*center-align the text*/
+    padding: 20px;/*add padding*/
+    border: 1px solid black;/*border style*/   
+}
+tr:nth-child(even) {
+    background-color: #f3f3f3;/*background colour for even rows*/
+}
+tr:hover {
+    cursor: pointer;/*change cursor to pointer*/
+}
+/*favourite*/
+#favourite {
+    margin: 50px;/*add margin*/
+    padding: 0 60px;/*add horizontal padding*/
+}
+.favouriteTitle{
+    text-align: center;/*center-align the text*/
+    padding: 20px 20px 0 20px;/*add padding*/
+    color: black;/*text colour*/
+    font-size: 35px;/*font size*/
+}
+.favourites {
+    display: flex;/*favourites' layout*/
+    flex-direction: column;/*arrange the content in a column*/
+    gap: 50px;/*leave gap between items*/
+}
+.favourites-item,
+.favourites-item-reverse {
+    display: flex;/*favourites items' layout*/
+    background-color: white;/*background colour*/
+    border-radius: 10px;/*round the border corners*/
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);/*add shadow effect*/    
+    align-items: center;/*center the content vertically*/
+    gap: 30px;/*leave gap between items*/
+    padding: 40px 50px;/*add padding*/
+}
+.favourites-item {
+    flex-direction: row;/*arrange the content in a row*/
+}
+.favourites-item-reverse {
+    flex-direction: row-reverse;/*arrange the content in a reverse row*/
+}
+.favourites-item iframe,
+.favourites-item-reverse iframe,
+.favourites-item img,
+.favourites-item-reverse img {
+    width: 600px;/*iframes and image width*/
+    height: 400px;/*iframesa and image height*/
+    border-radius: 10px;/*round the border corners*/
+    flex-shrink: 0;/*prevent shrinking*/
+}
+.favourites-text {
+    max-width: 100%;/*set max width*/
+    color: black;
+    text-align: left;/*left-align the text*/
+}
+.favourites-text h2{
+    margin-bottom: 10px;/*add bottom margin*/
+}
+.favourites-text h3{
+    margin: 10px 0;/*add vertical margin*/ 
+}
+.favourites-text p{
+    line-height: 1.5;/*set line height*/
+    padding-right: 30px;/*add right padding*/
+}
+.favourites a {
+    color: blue;/*link colour*/
+    text-decoration: none;/*remove the underline*/
+}
+.favourites a:hover {
+    text-decoration: underline;/*add underline*/
+}
+/*for half screen*/
+@media (max-width: 768px) {
+    .favourites-item,
+    .favourites-item-reverse {
+        flex-direction: column;/*arrange the content in a column*/
+        text-align: center;/*center-align the text*/
+    }
+    .favourites-item iframe,
+    .favourites-item-reverse iframe,
+    .favourites-item img,
+    .favourites-item-reverse img {
+        width: 100%; /*full width*/
+        height: 300px;/*iframes and image height*/
+    }
+    .favourites-text {
+        width: 100%;/*full width*/
+        margin-top: 20px;/*add top margin*/
+        text-align: center;/*center-align the text*/
+    }
+}
+/*contact*/
+#contact{
+    padding: 50px 20px;/*add padding*/
+    max-width: 800px;/*set max width*/
+    margin: auto;/*center the element*/ 
+}
+.contactTitle{
+    text-align: center;/*center-align the text*/
+    padding: 20px 20px 0 20px;/*add padding*/
+    color: black;/*text colour*/
+    font-size: 35px;/*font size*/
+}
+.contact-form{
+    background-color: white;/*background colour*/
+    padding: 40px;/*add padding*/
+    border-radius: 20px;/*round the border corners*/
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);/*add shadow effect*/
+    text-align: left;/*left-align the text*/
+    margin-bottom: 50px;/*add bottom margin*/
+}
+.contact-form h1{
+    color: #5a3d8a;/*font colour*/
+    margin-bottom: 30px;/*add bottom margin*/
+    font-size: 24px;/*font size*/
+    border-bottom: 5px solid grey;/*add bottom border*/
+    width: 150px;/*length of the bottom border*/
+    padding-bottom: 10px;/*add bottom padding*/
+}
+.contact-form label{
+    display: block;/*labels' layput*/
+    margin-bottom: 20px;/*add bottom margin*/
+    color: black;/*text colour*/    
+}
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea{
+    width: 100%;/*full width*/
+    padding: 10px;/*add padding*/
+    margin-bottom: 30px;/*add bottom margin*/
+    border: 1px solid #cccccc;/*border style*/
+    border-radius: 5px;/*round the border corners*/
+    font-size: 16px;/*font size*/
+}
+.contact-form input[type="submit"]{
+    background-color: #5a3d8a;/*button colour*/
+    border: 2px solid transparent;/*border style*/
+    border-radius: 20px;/*round the border corners*/
+    color: white;/*text colour*/
+    padding: 15px 30px;/*add padding*/
+    font-size: 18px;/*font size*/
+    cursor: pointer;/*change cursor to pointer*/
+}
+.contact-form input[type="submit"]:hover{
+    background-color: #dedede;/*button colour*/
+    color: black;/*text colour*/
+}
+.social-media{
+    display: flex;/*social medias' layout*/
+    justify-content: center;/*center the content*/
+}
+.social-media a {
+    margin: 10px;/*add margin*/
+}
+.social-media a:hover {
+    transform: scale(1.1);/*move up*/    
+    transition: transform 0.2s ease-in-out;/*add transition*/
+}
+.social-media img {
+    width: 80px;/*icon width*/
+    height: 80px;/*icom height*/
+    border-radius: 50%;/*round image border*/
+    object-fit: cover;/*make sure image covers the whole frame*/
+    margin-bottom: 10px;/*add bottom margin*/
+}
+/*footer*/
+footer {
+    background-color:#b19cd9;/*footer colour*/
+    color: black;/*text colour*/
+    text-align: center;/*center-align the text*/
+    width: 100%;/*footer width*/
+    padding: 20px;/*add padding*/
+}

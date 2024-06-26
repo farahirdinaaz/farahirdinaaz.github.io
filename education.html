@@ -1,0 +1,128 @@
+<!--Farah Irdina Binti Ahmad Zulkiflee, 2215184-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.png">
+</head>
+<body>    
+    <!--header-->
+    <header>
+        <!--page logo with heading-->
+        <div class="logo">
+            <a href="index.html">
+                <img src="logo.png" alt="Page logo">
+            </a>                
+            <h1>Farah's world</h1>
+        </div>
+        <!--search bar-->
+        <div class="search-container">
+            <input type="text" class="search-input">
+            <button class="search-btn">
+                <img src="search.png" alt="Search icon" class="search-icon">
+            </button>
+        </div> 
+        <!--language option-->
+        <div class="language-selector">
+            <img src="globe.png" alt="globe-icon">
+            <select name="language" class="language">
+                <option value="english">ENG</option>
+                <option value="malay">MAY</option>
+                <option value="korean">KOR</option>
+                <option value="japanese">JPN</option>
+                <option value="arabic">ARA</option>
+            </select>
+        </div>
+    </header>
+    <!--navigation bar-->
+    <nav>
+        <ul>                
+            <li><a href="index.html">Home</a></li>
+            <li class="current-page">Education</li>
+            <li><a href="timetable.html">Timetable</a></li>
+            <li><a href="favourite.html">Favourite</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <main id="education">
+        <!--former and current schools-->
+        <div class="background">
+            <h1>Academic Background</h1>
+            <div class="school">
+                <h2>Primary School</h2>
+                <h3>SK Taman Bukit Indah</h3>
+                <p><i>
+                    Sekolah Kebangsaan Taman Bukit Indah, Jalan Bukit Indah Utama, 
+                    Taman Bukit Indah, 68000 Ampang, Selangor
+                </i></p>
+                <img src="SK.png" alt="SKTBI's logo" class="school-logo" data-school="1"> 
+            </div>
+            <div class="school">
+                <h2>Secondary School</h2>
+                <h3>SMK Bukit Indah</h3>
+                <p><i>
+                    Sekolah Menengah Kebangsaan Bukit Indah, Jalan Bukit Indah Utama, 
+                    Taman Bukit Indah, 68000 Ampang, Selangor
+                </i></p>
+                <img src="SMK.png" alt="SEMINDA's logo" class="school-logo" data-school="2">
+            </div>
+            <div class="school">
+                <h2>Foundation Degree</h2>
+                <h3>IIUM Gambang Campus</h3>
+                <p><i>
+                    Centre for Foundation Studies, International Islamic University Malaysia, 
+                    Paya Besar, 26300 Gambang, Pahang
+                </i></p>
+                <img src="IIUM.png" alt="IIUM's logo" class="school-logo" data-school="3">
+            </div>
+            <div class="school">
+                <h2>Bachelor's Degree</h2>
+                <h3>IIUM Gombak Campus</h3>
+                <p><i>
+                    International Islamic University Malaysia, Jalan Gombak, 
+                    53100 Kuala Lumpur, Selangor
+                </i></p>
+                <img src="IIUM.png" alt="IIUM's logo" class="school-logo" data-school="4">  
+            </div>
+        </div>
+        <!--academic achievements-->
+        <div class="achievements">
+            <h1>Academic Achievements</h1>
+            <ul>
+                <li>UPSR : 5A</li>
+                <li>PT3 : 9A 1B</li>
+                <li>SPM : 7A 2B</li>
+                <li>Foundation Degree : 3.54</li>
+                <li>Bachelor's Degree : 3.83</li>
+            </ul>   
+        </div>
+        <!--academic certificates-->
+        <div class="certificates">
+            <h1>Certificates</h1>
+            <ul>
+                <li>Sijil Pelajaran Malaysia : Pure Science - 2020</li>
+                <li>Foundation Degree : Engineering and Computer Science - 2021</li>
+                <li>Bachelor's Degree : Computer Science (honours) - In progress</li>
+            </ul>
+        </div>
+    </main>
+    <!--modal for schools-->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title"></h2>
+            <p id="modal-address"></p>
+            <img id="modal-image" src="#" alt="School image">
+            <a id="modal-map-link" href="#" target="_blank">View on Google Maps</a>
+        </div>
+    </div>    
+    <!--footer-->
+    <footer>
+        <p>&copy; 2024 Farah Irdina. All rights reserved.</p>
+    </footer>   
+    <script src="education.js"></script>     
+</body>
+</html>
